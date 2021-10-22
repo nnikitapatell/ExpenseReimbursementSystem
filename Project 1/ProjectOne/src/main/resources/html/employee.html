@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Employee</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../css/style-employee.css">
+	<script src="/js/employee.js"></script>
+</head>
+
+<body>
+	<!-- Navigation -->
+	<nav class=" navbar">
+		<nav class="navbar navbar navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand">
+					Expense Reimbursement System | Employee
+				</a>
+				<form action="/api/user/logout" mehtod = 'GET'>
+					<button class="btn btn-outline-danger" id="logoutbutton">Log Out</button>
+				</form>
+			</div>
+		</nav>
+	</nav>
+
+	<!--<div class="title"><h1>PENDING</h1><hr></div>
+    <div class="table-container" id="table-container"></div>
+    <br><br><br><br>
+    
+    <div class="title"><h1>RESOLVED</h1><hr></div>
+    <div class="resolved-table-container" id="resolved-table-container"></div>
+    <br><br><br><br>-->
+	
+	<div class="create-form" id="create-form">
+		<form id="reimbursement-form" action="/user/employee/tickets/create" method="POST">
+			<h3>CREATE TICKET FORM:</h3>
+			<div class="amount"><input type="text" id="amount" placeholder="Amount" name="reimAmount"></div>
+			<div class="desc"><input type="text" id="Descriptoin" placeholder="Description" name="reimDesc"></div>
+			<div class="type">
+				<select id="type" name="reimType">
+					<option value="1">LODGING</option>
+					<option value="2">TRAVEL</option>
+					<option value="3">FOOD</option>
+					<option value="4">OTHER</option>
+				</select>
+				<div>
+					<button class="btn btn-secondary" id="create-btn">Create</button>
+				</div>
+		</form>
+	</div>
+	<br />
+
+	<table id="myReimTable" class="myTable">
+		<thead>
+			<tr id="header">
+				<th scope="col">Ticket ID</th>
+				<th scope="col">Amount ($)</th>
+				<th scope="col">Date Submitted</th>
+				<th scope="col">Date Resolved</th>
+				<th scope="col">Description</th>
+				<th scope="col">Author</th>
+				<th scope="col">Resolver</th>
+				<th scope="col">Status</th>
+				<th scope="col">Type</th>
+			</tr>
+		</thead>
+		<tbody id="myReimTableData"></tbody><!-- JS manipulate(populate) the object model-->
+	</table>
+
+
+</body>

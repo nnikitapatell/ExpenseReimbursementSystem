@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New User</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../style/style-employee.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <nav class="navbar navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand">
+                    Expense Reimbursement System | Register
+                </a>
+            </div>
+        </nav>
+    </nav>
+
+    <div class="regiser-new-employee">
+        <form id="registration form">
+            <div><input type="text" id="username" placeholder="Username"></div>
+            <div><input type="text" id="password" placeholder="Password"></div>
+            <div><input type="text" id="first" placeholder="First name"></div>
+            <div><input type="text" id="last" placeholder="Last name"></div>
+            <div><input type="text" id="email" placeholder="Email"></div>
+            <div id="typeOfUser">
+                <label for="type">Select A User Type: </label>
+                <select id="type">
+                    <option value="1">Manager</option>
+                    <option value="2" selected>Employee</option>
+                </select>
+            </div>
+            <div>
+                <button class="btn btn-danger" id="create-btn">Create Account</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

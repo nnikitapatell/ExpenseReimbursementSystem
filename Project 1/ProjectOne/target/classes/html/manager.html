@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Manager</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../css/style-manager.css">
+	<script src="/js/manager.js"></script>
+</head>
+
+<body>
+	<!-- Navigation -->
+	<nav class=" navbar">
+		<nav class="navbar navbar navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand">
+					Expense Reimbursement System | Manager
+				</a>
+				<form action="/api/user/logout" mehtod = 'GET'>
+					<button class="btn btn-outline-danger" id="logoutbutton">Log Out</button>
+				</form>
+			</div>
+		</nav>
+	</nav>
+	
+	<br />
+	
+	<div class="create-form" id="create-form">
+		<form id="update-form" action="/user/manager/tickets/update" method="POST">
+			<h3>UPDATE FORM:</h3>
+			<div class="reimId"><input type="text" id="reimId" placeholder="Reimbursement ID" name="reimId"></div>
+			<div class="type">
+				<select id="type" name="reimStatusId">
+					<option value="1">PENDING</option>
+					<option value="2">APROVED</option>
+					<option value="3">DENIED</option>
+				</select>
+				<div>
+					<button class="btn btn-secondary" id="create-btn">Update</button>
+				</div>
+		</form>
+	</div>
+	<br />
+	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Filter requests by status...">
+
+		<table id="myReimTable" class="myTable">
+		<thead>
+			<tr id="header">
+				<th scope="col">Ticket ID</th>
+				<th scope="col">Amount ($)</th>
+				<th scope="col">Date Submitted</th>
+				<th scope="col">Date Resolved</th>
+				<th scope="col">Description</th>
+				<th scope="col">Author</th>
+				<th scope="col">Resolver</th>
+				<th scope="col">Status</th>
+				<th scope="col">Type</th>
+			</tr>
+		</thead>
+		<tbody id="myReimTableData"></tbody><!-- JS manipulate(populate) the object model-->
+	</table>
+	
+	
+	
+</body>
+</html>

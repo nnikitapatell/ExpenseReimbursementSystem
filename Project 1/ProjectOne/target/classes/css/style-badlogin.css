@@ -1,0 +1,10 @@
+body{
+    background-image: url(image.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.navbar{
+    background-color: rgba(14, 22, 54, 0.384);
+    text-align: center;
+}
