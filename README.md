@@ -1,4 +1,4 @@
-# PROJECT NAME
+# Expense Reimbursement System
 
 ## Project Description
 
@@ -6,9 +6,16 @@ Here goes your awesome project description!
 
 ## Technologies Used
 
-* Tech 1 - version 1.0
-* Tech 2 - version 2.0
-* Tech 3 - version 3.0
+* Jalin
+* JDBC
+* PostgreSQL
+* HTML
+* CSS
+* JavaScript
+* Java
+* AJAX
+* JUnit
+* Log4J
 
 ## Features
 
