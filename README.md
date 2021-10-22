@@ -20,7 +20,6 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 
 ## Features
 
-List of features ready:
 * Uses the concept of “Separation of concerns”.
 * The application deploys onto a Server.
 * The back-end system uses JDBC to connect to a PostgreSQL database
